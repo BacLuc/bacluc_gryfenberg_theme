@@ -1,6 +1,7 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
-use Concrete\Core\Validation\CSRF\Token;
+
 use Concrete\Core\User\User;
+use Concrete\Core\Validation\CSRF\Token;
 
 ?>
 <!doctype html>
