@@ -11,6 +11,7 @@ use Concrete\Core\Validation\CSRF\Token;
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="<?php echo $view->getThemePath(); ?>/css/vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="/concrete/css/font-awesome.css">
         <?php echo $html->css($view->getStylesheet('main.less'));?>
         <?php echo $html->css($view->getStylesheet('menu.css'));?>
         <?php echo $html->css($view->getStylesheet('submenu.css'));?>
