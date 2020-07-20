@@ -54,15 +54,23 @@ class PageTheme extends Theme{
             '*' => array(
                 'same-height',
             ),
+
             'core_area_layout' => array(
                 'same-height-container',
             ),
-            'feature' => array(
+            'image-slider'     => array(
+                'max-height-300',
+            ),
+            'feature'          => array(
                 'fa-lg'
-                ,'fa-2x'
-                ,'fa-3x'
-                ,'fa-4x'
-                ,'fa-5x'
+                ,
+                'fa-2x'
+                ,
+                'fa-3x'
+                ,
+                'fa-4x'
+                ,
+                'fa-5x'
 
             ),
 
