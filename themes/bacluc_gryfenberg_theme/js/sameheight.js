@@ -24,11 +24,12 @@
 
                 var maxheight = 0;
                     //find max height
-                $(this).find(".same-height").each(function(e){
-                        if(maxheight<$(this).height()){
-                            maxheight =$(this).height();
-                        }
+                $(this).find(".same-height").each(function (e) {
+                    if (maxheight < $(this).height()) {
+                        maxheight = $(this).height();
+                    }
                 });
+                console.log("maxheight is: " + maxheight);
                     //now set the height of each element, backup the previous height (if set). If the height was set with css before, the backup is already there
                 $(this).find(".same-height").each(function(e){
                     if($(this).is("[height]")){
@@ -37,7 +38,7 @@
                     }
                     var style = $(this).attr('style');
                     if(style) {
-                        if (style.test(new RegExp('^ *height *:'))) {
+                        if (new RegExp('^ *height *:').test(style)) {
                             $(this).attr("data-sameheight-cssheightbackup", $(this).css("height"));
                             $(this).css("height", "");
                         }
