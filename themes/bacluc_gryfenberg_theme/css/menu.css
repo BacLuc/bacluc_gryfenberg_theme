@@ -13,11 +13,17 @@
     height:100px;
 }
 
-.navbar-brand{
-    padding-top:2.5px;
-    padding-bottom:2.5px;
+.navbar-brand {
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
 }
 
-.navbar-brand img{
+.navbar-brand img {
     height: 45px;
+}
+
+.loginpanel #ccm-account-menu {
+    position: relative;
+    top: 0;
+    right: 0;
 }

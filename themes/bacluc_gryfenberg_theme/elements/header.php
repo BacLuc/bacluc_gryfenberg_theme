@@ -64,6 +64,7 @@ use Concrete\Core\Validation\CSRF\Token;
                             } else {
                                 $token = new Token();
                                 ?>
+                                <span id="ccm-account-menu-container"></span>
                                 <form action="<?php echo URL::to('/login', 'logout') ?>">
                                     <?php id(new Token())->output('logout'); ?>
                                     <a href="#" onclick="$(this).closest('form').submit();return false">
