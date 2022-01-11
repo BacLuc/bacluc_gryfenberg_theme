@@ -25,24 +25,25 @@ use Concrete\Core\Validation\CSRF\Token;
         <div class="<?php echo $c->getPageWrapperClass(); ?>">
     
             <!-- navigation -->
-            <nav class="navbar navbar-default" role= "navigation" id="globalnav">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" role= "navigation" id="globalnav">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle <?php if($_GET['menuopen']){echo " in ";} ?>" data-toggle="collapse" data-target="#navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        </button>
-                        <div class="navbar-brand">
-                           <?php
-                           $a = new GlobalArea('Header Site Title');
-                           $a->display();
+                    <a class="navbar-brand" href="#">
+                        <?php
+                        $a = new GlobalArea('Header Site Title');
+                        $a->display();
 
-                           ?>
-                        </div>
-                    </div>
+                        ?>
+                    </a>
+                    <button class="navbar-toggler <?php if($_GET['menuopen']){echo " in ";} ?>"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbar-collapse-1"
+                            aria-controls="navbar-collapse-1"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     
                     <!-- nav items -->
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
@@ -52,12 +53,12 @@ use Concrete\Core\Validation\CSRF\Token;
                         $a->display();
                         ?>
 
-                        <div class="navbar-form navbar-right loginpanel">
+                        <div class="navbar-form loginpanel">
                             <?php
                             if (!id(new User)->isLoggedIn()) {
                                 ?>
                                 <a href="<?php echo URL::to('/login')?>">
-                                    <button class="btn btn-default">
+                                    <button class="btn btn-light">
                                     <?php echo t('Log in') ?>
                                         </button>
                                 </a>
@@ -66,10 +67,10 @@ use Concrete\Core\Validation\CSRF\Token;
                                 $token = new Token();
                                 ?>
                                 <span id="ccm-account-menu-container"></span>
-                                <form action="<?php echo URL::to('/login', 'logout') ?>">
+                                <form class="d-flex" action="<?php echo URL::to('/login', 'logout') ?>">
                                     <?php id(new Token())->output('logout'); ?>
                                     <a href="#" onclick="$(this).closest('form').submit();return false">
-                                        <button class="btn btn-default">
+                                        <button class="btn btn-light">
                                             <?php echo t('Log out') ?>
                                         </button>
                                     </a>
@@ -79,7 +80,7 @@ use Concrete\Core\Validation\CSRF\Token;
                             ?>
                         </div>
 
-                        <div class="navbar-form navbar-right">
+                        <div class="navbar-form">
                             <?php
                             $a = new GlobalArea('Global Search');
                             $a->display();

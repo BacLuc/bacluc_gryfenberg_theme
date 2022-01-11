@@ -85,14 +85,16 @@ foreach ($navItems as $ni) {
 	}
 
 
+    $classesLi[] = 'nav-item';
+    $classesA[] = 'nav-link';
 	
 	if ($ni->hasSubmenu) {
 		//class for items that have dropdown sub-menus
 		// $classes[] = 'dropdown';
 
 		$classesLi[] = 'dropdown';
-		$classesA[] = 'dropdown-toggle';
-		$attributesA[] = 'data-toggle="dropdown"';
+        $classesA[] = 'dropdown-toggle';
+		$attributesA[] = 'data-bs-toggle="dropdown"';
 		$classesUl[] = 'dropdown-menu';
 		//$ni->url = '#';
 
@@ -101,6 +103,7 @@ foreach ($navItems as $ni) {
         }else{
 
             $classesLi[] = 'dropdown-submenu';
+            $classesLi[] = 'dropdown-item';
 
             if($ni->isCurrent){
                 $classesLi[] ="open";

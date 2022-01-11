@@ -7,6 +7,7 @@
             //if a dropdown is active, it should also be open
             if($(this).hasClass("active")){
                 $(this).addClass("open");
+                $(this).children("ul:first").addClass('show');
             }
             $(this).on("click touch",function(e){
 
@@ -21,7 +22,8 @@
                     /*($(this).hasClass("active") || $(this).hasClass("nav-path-selected")) && */!$(this).hasClass("open")
 
                 ) {
-                    $(this).toggleClass("open");
+                    $(this).addClass("open");
+                    $(this).children("ul:first").addClass('show');
                     return false;
                 }
 
@@ -45,6 +47,7 @@
 
     $('.collapse.navbar-collapse li.dropdown').on("mouseenter", function(e){
         $(this).addClass("open");
+        $(this).children("ul:first").addClass('show');
         $(this).addClass("justchanged");
         setTimeout(function(element){
             $(element).removeClass("justchanged")
@@ -52,7 +55,9 @@
     });
 
     $('.collapse.navbar-collapse li.dropdown').on("mouseleave", function(e){
+        // $(this).attr("aria-expanded", "false");
         $(this).removeClass("open");
+        $(this).children("ul:first").removeClass('show');
         $(this).addClass("justchanged");
         $(this).addClass("justchanged");
         setTimeout(function(element){
