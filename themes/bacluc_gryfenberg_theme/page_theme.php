@@ -11,7 +11,7 @@ class PageTheme extends Theme{
 	 * Docs: http://goo.gl/GdvAr7
 	 */
 	
-	protected $pThemeGridFrameworkHandle = 'bootstrap3';
+	protected $pThemeGridFrameworkHandle = 'bootstrap5';
 
 	/** 
 	 * Register theme assets
