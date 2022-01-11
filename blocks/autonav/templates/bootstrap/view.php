@@ -61,6 +61,8 @@ foreach ($navItems as $ni) {
 	$classesA = array();
 	$attributesA = array();
 
+    $ni->caret = '';
+
 	if ($ni->isCurrent ) {
 		//class for the page currently being viewed
 		$classesLi[] = 'active';

@@ -35,7 +35,7 @@ use Concrete\Core\Validation\CSRF\Token;
 
                         ?>
                     </a>
-                    <button class="navbar-toggler <?php if($_GET['menuopen']){echo " in ";} ?>"
+                    <button class="navbar-toggler <?php if(isset($_GET['menuopen'])){echo " in ";} ?>"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbar-collapse-1"
