@@ -1,4 +1,8 @@
-<?php defined('C5_EXECUTE') or die (_('Access Denied.')); ?>
+<?php
+defined('C5_EXECUTE') or die (_('Access Denied.'));
+
+use Concrete\Core\View\View;
+?>
 			<!-- footer -->
 			<footer class="site-footer">
 				<div class="container">
@@ -23,6 +27,6 @@
 		<script src="<?php echo $view->getThemePath(); ?>/js/main.js"></script>
         <script src="<?php echo $view->getThemePath(); ?>/js/sameheight.js"></script>
 
-		<?php Loader::element('footer_required'); ?>
+		<?php View::element('footer_required'); ?>
 	</body>
 </html>
