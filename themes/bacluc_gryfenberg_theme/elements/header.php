@@ -12,7 +12,6 @@ use Concrete\Core\Validation\CSRF\Token;
 
         <link rel="stylesheet" href="<?php echo $view->getThemePath(); ?>/css/vendor/bootstrap/bootstrap.css">
         <link rel="stylesheet" href="<?php echo $view->getThemePath(); ?>/css/vendor/bootstrap/bootstrap-grid.css">
-        <link rel="stylesheet" href="/concrete/css/font-awesome.css">
         <?php echo $html->css($view->getStylesheet('main.less'));?>
         <?php echo $html->css($view->getStylesheet('menu.css'));?>
         <?php echo $html->css($view->getStylesheet('submenu.css'));?>
@@ -28,13 +27,13 @@ use Concrete\Core\Validation\CSRF\Token;
             <nav class="navbar navbar-expand-lg navbar-light bg-light" role= "navigation" id="globalnav">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand" href="#">
+                    <span class="navbar-brand">
                         <?php
                         $a = new GlobalArea('Header Site Title');
                         $a->display();
 
                         ?>
-                    </a>
+                    </span>
                     <button class="navbar-toggler <?php if(isset($_GET['menuopen'])){echo " in ";} ?>"
                             type="button"
                             data-bs-toggle="collapse"
