@@ -22,6 +22,10 @@
     height: 45px;
 }
 
+div.loginpanel {
+    margin-left: auto
+}
+
 .loginpanel #ccm-account-menu {
     position: relative;
     top: 0;
