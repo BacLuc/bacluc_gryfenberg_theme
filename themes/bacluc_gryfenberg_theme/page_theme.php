@@ -21,6 +21,8 @@ class PageTheme extends Theme{
 	public function registerAssets(){
 		$this->providesAsset('css', 'bootstrap/*');
 		$this->providesAsset('javascript', 'bootstrap/*');
+
+        $this->requireAsset('css', 'font-awesome');
 		
 		$this->requireAsset('javascript', 'jquery');
 		$this->requireAsset('javascript', 'picturefill');
