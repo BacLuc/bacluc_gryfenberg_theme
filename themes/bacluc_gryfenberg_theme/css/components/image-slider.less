@@ -1,3 +1,20 @@
-.max-height-300 .ccm-image-slider .rslides {
-  max-height: 300px;
+.limit-height {
+  .ccm-image-slider .rslides {
+    picture {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      height: 40vh;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+  
+  .ccm-image-slider-inner {
+    .rslides_tabs {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

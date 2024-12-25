@@ -61,7 +61,7 @@ class PageTheme extends Theme{
                 'same-height-container',
             ),
             'image-slider'     => array(
-                'max-height-300',
+                'limit-height',
             ),
             'feature'          => array(
                 'fa-lg'
